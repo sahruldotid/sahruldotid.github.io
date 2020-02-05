@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[]]></title>
+    <link href="https://sahruldotid.github.io/atom.xml" rel="self"/>
+    <link href="https://sahruldotid.github.io/"/>
+    <updated>2020-02-06T05:23:21+07:00</updated>
+    <id>https://sahruldotid.github.io/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Why did i use github pages ?]]></title>
+            <link href="https://sahruldotid.github.io/blog/first-post/"/>
+            <updated>2020-02-04T00:00:00+07:00</updated>
+            <id>https://sahruldotid.github.io/blog/first-post/</id>
+            <content type="html"><![CDATA[<h2>Why?</h2>
+
+<p>Well, that is quite simple.</p>
+
+<p>
+    Gada duit bos, biar keren kek yang lain :v
+</p>
+
+<p></p></p>
+]]></content>
+        </entry>
+    </feed>

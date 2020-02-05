@@ -1,0 +1,17 @@
+#!/bin/bash
+
+sudo dpkg --add-architecture i386 
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+sudo apt update
+sudo apt install --install-recommends winehq-stable
+sudo apt install radare2 binwalk foremost libimage-exiftool-perl gdb file wireshark
+sudo pip install pwntools ropgadget
+
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+
+
+
+

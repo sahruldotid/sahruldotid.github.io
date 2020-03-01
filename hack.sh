@@ -6,7 +6,7 @@ unzip /tmp/ngrok.zip -d /usr/local/bin/
 service ssh start
 useradd -m -s /bin/bash syahrul
 echo "syahrul:syahrul" | chpasswd
-ngrok authtoken 88Cgi2JRadbDCwpiUps1t_4tiBWaEt5sXLDDvsp8NEk
+ngrok authtoken 1YWVQu8nlCDQGwnmjpBovHEb9Qv_68qPihQDomn3b5mKCMv6K
 nohup ngrok tcp 22 &
 
 

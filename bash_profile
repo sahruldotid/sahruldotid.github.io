@@ -36,6 +36,14 @@ dex2jar(){
 /home/syahrul/dex2jar/dex2jar $1
 }
 
+cname(){
+input="$1"
+while IFS= read -r line
+do
+  host "$line" | grep alias
+done < "$input"
+}
+
 available_tool(){
 echo "cerspotter domain"
 echo "crtsh domain"
@@ -56,6 +64,7 @@ echo "aquatone"
 echo "assetfinder"
 echo "ffuf"
 echo "hakrawler"
+echo "cname FILENAME"
 
 
 }

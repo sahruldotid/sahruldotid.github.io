@@ -65,6 +65,7 @@ echo "assetfinder"
 echo "ffuf"
 echo "hakrawler"
 echo "cname FILENAME"
+echo "smuggler.py"
 
 
 }

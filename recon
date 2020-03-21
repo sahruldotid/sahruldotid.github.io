@@ -57,6 +57,7 @@ sudo pip install trufflehog
 git clone https://github.com/sqlmapproject/sqlmap.git
 
 
+
 #INSTALL DEX2JAR
 cd ~
 git clone https://github.com/Damian89/extended-xss-search.git
@@ -85,6 +86,8 @@ wget https://sahruldotid.github.io/bash_profile
 
 #INSTALL WPSCAN
 sudo gem install wpscan --no-rdoc --no-ri
+
+wget https://raw.githubusercontent.com/gwen001/pentest-tools/master/smuggler.py
 
 rm *.zip
 rm LICENSE*

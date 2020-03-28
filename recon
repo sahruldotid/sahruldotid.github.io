@@ -88,7 +88,8 @@ wget https://sahruldotid.github.io/bash_profile
 sudo gem install wpscan --no-rdoc --no-ri
 
 wget https://raw.githubusercontent.com/gwen001/pentest-tools/master/smuggler.py
-
+wget https://sahruldotid.github.io/remdup -o ~/bin/remdup
+chmod +x ~/bin/remdup
 rm *.zip
 rm LICENSE*
 rm README*

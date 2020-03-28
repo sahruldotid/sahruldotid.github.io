@@ -93,3 +93,5 @@ rm *.zip
 rm LICENSE*
 rm README*
 rm *tar.gz
+
+echo "source /home/syahrul/bash_profile" >> .profile

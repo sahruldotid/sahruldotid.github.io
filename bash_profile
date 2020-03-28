@@ -36,6 +36,10 @@ dex2jar(){
 /home/syahrul/dex2jar/dex2jar $1
 }
 
+remdup(){
+python /home/syahrul/bin/remdup $1
+}
+
 cname(){
 input="$1"
 while IFS= read -r line

@@ -37,7 +37,7 @@ dex2jar(){
 }
 
 remdup(){
-python /home/syahrul/remdup.py $1
+python /home/syahrul/remdup $1
 }
 
 cname(){

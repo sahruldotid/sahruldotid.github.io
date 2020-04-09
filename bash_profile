@@ -70,6 +70,7 @@ echo "ffuf"
 echo "hakrawler"
 echo "cname FILENAME"
 echo "smuggler.py"
+echo "arjun param finder"
 
 
 }

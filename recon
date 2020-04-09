@@ -81,6 +81,10 @@ go get github.com/ffuf/ffuf
 #crawler
 go get github.com/hakluke/hakrawler
 
+#arjun param finder
+git clone https://github.com/s0md3v/Arjun.git
+
+
 #Bash Profile
 wget https://sahruldotid.github.io/bash_profile
 

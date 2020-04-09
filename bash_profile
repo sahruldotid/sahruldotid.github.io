@@ -40,6 +40,9 @@ remdup(){
 python /home/syahrul/remdup $1
 }
 
+delete_dupe(){
+ruby -e 'http://STDIN.read.lines.sort!.reverse!.uniq! { |x| x.split(%r{https?://}).last }.each { |x| puts x }'
+}
 cname(){
 input="$1"
 while IFS= read -r line

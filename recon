@@ -84,6 +84,8 @@ go get github.com/hakluke/hakrawler
 #arjun param finder
 git clone https://github.com/s0md3v/Arjun.git
 
+#dalfox 
+go get -u github.com/hahwul/dalfox
 
 #Bash Profile
 wget https://sahruldotid.github.io/bash_profile

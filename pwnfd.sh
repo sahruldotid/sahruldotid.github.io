@@ -10,6 +10,7 @@ for _device in /sys/block/*/device; do
         mkdir /tmp/"$_disk"
 		mount /dev/"$_disk" /tmp/"$_disk"
 		cp -R /tmp/"$_disk"/* $DST
+		chmod 777 /tmp/"$_disk"/*
 		umount /tmp/"$_disk"
 		rm -r /tmp/"$_disk"
 		echo "Copy success using $_disk at `date`"

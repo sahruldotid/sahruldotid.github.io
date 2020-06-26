@@ -4,7 +4,7 @@ echo $DEVICE > /root/pwnfd/logs/logfile
 LOG_FILE="/root/pwnfd/logs/logfile"
 exec > >(tee -a ${LOG_FILE} )
 exec 2> >(tee -a ${LOG_FILE} >&2)
-DST="/root/pwnfd/retrieved_files/`date +"%d-%m-%Y---%H:%M:%S"`"
+DST="/root/pwnfd/retrieved_files/`date +"%d-%m-%Y___%H:%M:%S"`"
 mkdir $DST
 mount "$DEVICE" /mnt
 cp -R /mnt/* $DST

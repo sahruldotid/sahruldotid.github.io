@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 = "remove" ]; then
+if [[ $1 = "remove" ]]; then
    sudo rm -rf /etc/udev/rules.d/99-exploit.rules
    sudo rm -rf /tmp/pwnfd
    echo "pwnfd removed :)"

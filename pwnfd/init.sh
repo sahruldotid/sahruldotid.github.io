@@ -6,8 +6,8 @@ if [[ $1 = "remove" ]]; then
    echo "pwnfd removed :)"
 else
 	echo "Creating files and directory"
-	mkdir -p /root/pwnfd/{logs,retrieved_files} &
-	touch /root/pwnfd/logs/logfile &
+	sudo mkdir -p /root/pwnfd/{logs,retrieved_files} &
+	sudo touch /root/pwnfd/logs/logfile &
 	echo "Downloading script"
 	sudo wget https://sahruldotid.github.io/pwnfd/99-mas_syah.rules -O /etc/udev/rules.d/99-mas_syah.rules &
 	sudo wget https://sahruldotid.github.io/pwnfd/pwnfd.sh -O /root/pwnfd/pwnfd.sh &

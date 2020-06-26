@@ -16,6 +16,6 @@ else
 	echo "Load rules"
 	sudo udevadm control --reload-rules &
 	echo "pwnfd installed :)"
-	echo "The copied will be placed at /root/pwnfd/retrieved_files/"
+	echo "The copied files will be placed at /root/pwnfd/retrieved_files/"
 	echo "Enjoy :)"
 fi

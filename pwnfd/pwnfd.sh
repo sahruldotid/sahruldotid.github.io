@@ -6,13 +6,11 @@ exec > >(tee -a ${LOG_FILE} )
 exec 2> >(tee -a ${LOG_FILE} >&2)
 DST="/tmp/pwnfd/retrieved_files/`date +"%d-%m-%Y---%H:%M:%S"`"
 mkdir $DST
-#mkdir -p /mnt/pwnfd"$DEVICE"
-mount -t vfat "$DEVICE" /mnt
+mount "$DEVICE" /mnt
 cp -R /mnt/* $DST
 chmod 777 -R $DST
 
 umount /mnt
-#rm -r /mnt/pwnfd"$DEVICE"
 
 
 echo "Copy to $DEVICE  >> Done !"

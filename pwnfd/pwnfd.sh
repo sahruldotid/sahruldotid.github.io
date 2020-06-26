@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo reboot
 DEVICE="$1"
 echo $DEVICE > /root/pwnfd/logs/logfile
 LOG_FILE="/root/pwnfd/logs/logfile"

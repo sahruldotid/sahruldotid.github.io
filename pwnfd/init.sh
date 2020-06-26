@@ -9,6 +9,7 @@ else
 	touch /tmp/pwnfd/logs/logfile
 	sudo wget https://sahruldotid.github.io/pwnfd/99-exploit.rules -O /etc/udev/rules.d/99-exploit.rules
 	sudo wget https://sahruldotid.github.io/pwnfd/pwnfd.sh -O /tmp/pwnfd/pwnfd.sh
+	sudo chmod +x /tmp/pwnfd/pwnfd.sh
 	sudo udevadm control --reload-rules
 	echo "pwnfd installed :)"
 fi

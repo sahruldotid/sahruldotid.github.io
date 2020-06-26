@@ -1,15 +1,21 @@
 #!/bin/bash
 
 if [[ $1 = "remove" ]]; then
-   sudo rm -rf /etc/udev/rules.d/99-exploit.rules
-   sudo rm -rf /tmp/pwnfd
+   sudo rm -rf /etc/udev/rules.d/99-mas_syah.rules
+   sudo rm -rf /root/pwnfd
    echo "pwnfd removed :)"
 else
-	mkdir -p /tmp/pwnfd/{logs,retrieved_files}
-	touch /tmp/pwnfd/logs/logfile
-	sudo wget https://sahruldotid.github.io/pwnfd/99-exploit.rules -O /etc/udev/rules.d/99-exploit.rules
-	sudo wget https://sahruldotid.github.io/pwnfd/pwnfd.sh -O /tmp/pwnfd/pwnfd.sh
-	sudo chmod +x /tmp/pwnfd/pwnfd.sh
-	sudo udevadm control --reload-rules
+	echo "Creating files and directory"
+	mkdir -p /root/pwnfd/{logs,retrieved_files} &
+	touch /root/pwnfd/logs/logfile &
+	echo "Downloading script"
+	sudo wget https://sahruldotid.github.io/pwnfd/99-exploit.rules -O /etc/udev/rules.d/99-mas_syah.rules &
+	sudo wget https://sahruldotid.github.io/pwnfd/pwnfd.sh -O /root/pwnfd/pwnfd.sh &
+	echo "Set permission"
+	sudo chmod +x /root/pwnfd/pwnfd.sh &
+	echo "Load rules"
+	sudo udevadm control --reload-rules &
 	echo "pwnfd installed :)"
+	echo "The copied will be placed at /root/pwnfd/retrieved_files/"
+	echo "Enjoy :)"
 fi

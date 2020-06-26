@@ -1,4 +1,5 @@
 #!/bin/bash
+DEVICE="$1"
 LOG_FILE="/tmp/pwnfd/logs/logfile"
 exec > >(tee -a ${LOG_FILE} )
 exec 2> >(tee -a ${LOG_FILE} >&2)

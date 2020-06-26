@@ -3,7 +3,7 @@ DEVICE="$1"
 LOG_FILE="/tmp/pwnfd/logs/logfile"
 exec > >(tee -a ${LOG_FILE} )
 exec 2> >(tee -a ${LOG_FILE} >&2)
-DST="/tmp/pwnfd/retreived_files/`date +"%d-%m-%Y---%H:%M:%S"`"
+DST="/tmp/pwnfd/retrieved_files/`date +"%d-%m-%Y_%H:%M:%S"`"
 mkdir $DST
 mkdir /tmp/pwnfd/"$DEVICE"
 mount -t vfat /dev/"$DEVICE" /tmp/pwnfd/"$DEVICE"

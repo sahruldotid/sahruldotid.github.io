@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup as bs
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+import base64
 
 url = "https://referensi.data.kemdikbud.go.id/"
 
@@ -37,7 +38,7 @@ def getContact(path):
     email = table_sekolah[8].text
     website = table_sekolah[12].text
     return email+" : "+website 
-
+print(base64.b64decode("aHR0cHM6Ly9zYWhydWxkb3RpZC5naXRodWIuaW8vCg=="))
 
 for url_kab, kab_kota in  getLink("index11.php?kode=320000").items():
     print(" =========================== ",kab_kota," =========================== ")

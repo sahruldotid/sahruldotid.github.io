@@ -17,7 +17,7 @@ export PATH=/usr/local/go/bin:$PATH:/home/syahrul/go/bin/
 sudo apt install chromium-browser vim ruby-full nmap netcat jq dnsutils awscli
 wget https://github.com/michenriksen/aquatone/releases/download/v1.6.0/aquatone_linux_amd64_1.6.0.zip
 unzip aquatone_linux_amd64_1.6.0.zip
-wget https://github.com/OWASP/Amass/releases/download/v3.7.3/amass_linux_amd64.zip
+wget https://github.com/OWASP/Amass/releases/download/v3.7.4/amass_linux_amd64.zip
 unzip amass_linux_amd64.zip
 curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
 sudo python2 /tmp/get-pip.py

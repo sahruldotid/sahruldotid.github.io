@@ -58,7 +58,7 @@ http_listen(){
 ssh -R 80:localhost:$1 ssh.localhost.run
 }
 
-available_tool(){
+echo "=======TOOLS AVAILABE========"
 echo "cerspotter domain"
 echo "crtsh domain"
 echo "certnmap domain"
@@ -83,7 +83,6 @@ echo "cname FILENAME"
 echo "smuggler.py"
 echo "arjun param finder"
 echo "http_listen [port]"
-
-}
+echo "============================"
 
 export PATH=$PATH:/home/syahrul/go/bin:/usr/local/go/bin/:/usr/local/nvidia/bin:/usr/local/cuda/bin:/tools/node/bin:/tools/google-cloud-sdk/bin:/opt/bin

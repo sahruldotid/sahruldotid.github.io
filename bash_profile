@@ -80,4 +80,4 @@ echo "http_listen [port]"
 
 }
 
-export PATH=$PATH:/home/syahrul/go/bin:/usr/local/go/bin
+export PATH=$PATH:/home/syahrul/go/bin:/usr/local/go/bin/:/usr/local/nvidia/bin:/usr/local/cuda/bin:/tools/node/bin:/tools/google-cloud-sdk/bin:/opt/bin

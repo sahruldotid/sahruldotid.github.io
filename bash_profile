@@ -49,6 +49,10 @@ do
 done < "$input"
 }
 
+http_listen(){
+ssh -R 80:localhost:$1 ssh.localhost.run
+}
+
 available_tool(){
 echo "cerspotter domain"
 echo "crtsh domain"
@@ -72,7 +76,7 @@ echo "hakrawler"
 echo "cname FILENAME"
 echo "smuggler.py"
 echo "arjun param finder"
-
+echo "http_listen [port]"
 
 }
 

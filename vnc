@@ -2,6 +2,19 @@
 
 sudo apt update
 sudo apt install expect tightvncserver lubuntu-desktop
+
+
+/usr/bin/expect <<EOF
+spawn /usr/bin/vncserver
+expect "Password:"
+send "syahrul\n"
+expect "Verify:"
+send "syahrul\n"
+expect "Would you like to enter a view-only password (y/n)?"
+send "n\n"
+interact
+EOF
+
 vncserver
 vncserver -kill :1
 cd ~

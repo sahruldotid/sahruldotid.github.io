@@ -19,6 +19,11 @@ ipinfo(){
 curl http://ipinfo.io/$1
 }
 
+port_brute(){
+cat $1 | while read line; do nmap -p- $line --min-rate 40000 -T4 --max-retries 2; done
+}
+
+
 #------ Tools ------
 dirsearch(){
 python3 /home/syahrul/dirsearch/dirsearch.py -t 200 -e php,html,asp,aspx,jsp,zip,bak,js -u $1
@@ -58,6 +63,7 @@ echo "cerspotter domain"
 echo "crtsh domain"
 echo "certnmap domain"
 echo "file_brute domain_list.txt"
+echo "port_brute domain_list.txt"
 echo "dirsearch url"
 echo "sqlmap url"
 echo "linkfinder url"

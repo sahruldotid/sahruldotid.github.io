@@ -1,6 +1,7 @@
 #!/bin/bash 
 
-
+#GENERATE SSH KEY
+ssh-keygen -t rsa -N '' -b 4096 -C "your_email@example.com" -f ~/.ssh/id_rsa <<< y
 
 
 # UPDATING REPO

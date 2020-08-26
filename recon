@@ -98,8 +98,6 @@ go get -u github.com/lc/gau
 #Bash Profile
 wget https://sahruldotid.github.io/bash_profile
 
-#INSTALL WPSCAN
-sudo gem install wpscan --no-rdoc --no-ri
 
 wget https://raw.githubusercontent.com/gwen001/pentest-tools/master/smuggler.py
 

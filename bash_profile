@@ -83,6 +83,7 @@ echo "cname FILENAME"
 echo "smuggler.py"
 echo "arjun param finder"
 echo "http_listen [port]"
+echo "nuclei"
 echo "============================"
 
 export PATH=$PATH:/home/syahrul/go/bin:/usr/local/go/bin/:/usr/local/nvidia/bin:/usr/local/cuda/bin:/tools/node/bin:/tools/google-cloud-sdk/bin:/opt/bin

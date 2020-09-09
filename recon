@@ -25,7 +25,7 @@ wget https://github.com/OWASP/Amass/releases/download/$AMASS_LATEST/amass_linux_
 
 #INSTALL NUCLEI
 URL_NUCLEI=`curl --silent "https://api.github.com/repos/projectdiscovery/nuclei/releases/latest" | grep linux_amd64 | grep "browser_download_url" | sed -E 's/.*"([^"]+)".*/\1/'`
-wget $URL_NUCLEI -o nuclei.tar.gz
+wget $URL_NUCLEI -O nuclei.tar.gz
 tar -xzvf nuclei.tar.gz
 mv nuclei ~/bin/
 

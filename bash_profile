@@ -11,7 +11,7 @@ curl https://certspotter.com/api/v0/certs\?domain\=$1 | jq '.[].dns_names[]' | s
 } 
 
 file_brute(){
-cat $1 | while read line; do python3 /home/syahrul/dirsearch/dirsearch.py -x 500,400,401,419,502,503,501 -t 200 -e php,html,asp,aspx,jsp,zip,bak,js -u "$line" --plain-text-report=`echo "$line" | sed 's/https//g' | tr -d "/,:"`; done
+cat $1 | while read line; do python3 /home/syahrul/dirsearch/dirsearch.py -x 500,400,401,419,502,503,501 -t 200 -e php,html,asp,aspx,jsp,js,zip -u "$line" --plain-text-report=`echo "$line" | sed 's/https//g' | tr -d "/,:"`; done
 }
 
 

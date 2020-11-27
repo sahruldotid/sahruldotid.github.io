@@ -1,4 +1,5 @@
 hostname server
+apt update
 apt install -y openssh-server
 echo "syahrul ALL=NOPASSWD: ALL" >> /etc/sudoers
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /tmp/ngrok.zip

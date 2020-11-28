@@ -1,4 +1,3 @@
-hostname server
 apt update
 apt install -y openssh-server
 echo "syahrul ALL=NOPASSWD: ALL" >> /etc/sudoers

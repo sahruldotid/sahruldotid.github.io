@@ -1,13 +1,29 @@
-apt update
-apt install -y openssh-server
+#! /bin/bash
+
 echo "syahrul ALL=NOPASSWD: ALL" >> /etc/sudoers
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /tmp/ngrok.zip
-unzip /tmp/ngrok.zip -d /usr/local/bin/
-service ssh start
 useradd -m -s /bin/bash syahrul
 echo "syahrul:syahrul" | chpasswd
-ngrok authtoken 1YWVQu8nlCDQGwnmjpBovHEb9Qv_68qPihQDomn3b5mKCMv6K
-nohup ngrok tcp 22 &
+sudo apt-get update
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+sudo dpkg --install chrome-remote-desktop_current_amd64.deb
+sudo apt install --assume-yes --fix-broken
+sudo DEBIAN_FRONTEND=noninteractive \
+apt install --assume-yes xfce4 desktop-base
+sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
+sudo apt install --assume-yes xscreensaver
+sudo systemctl disable lightdm.service
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg --install google-chrome-stable_current_amd64.deb
+sudo apt install --assume-yes --fix-broken
+sudo apt install nautilus nano -y 
+sudo adduser syahrul chrome-remote-desktop
+
+printf "\nSetup Complete " >&2 ||
+printf "\nError Occured " >&2
+printf '\nCheck https://remotedesktop.google.com/headless  Copy Command Of Debian Linux And Paste Down\n'
+read -p "Paste Here: " CRP
+su - syahrul -c """$CRP"""
+printf 'Check https://remotedesktop.google.com/access/ \n\n'
 
 
 wget https://sahruldotid.github.io/recon

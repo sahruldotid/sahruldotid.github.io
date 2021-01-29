@@ -18,15 +18,12 @@ sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
 sudo adduser syahrul chrome-remote-desktop
 } &> /dev/null &&
-printf '\nCheck https://remotedesktop.google.com/headless'
+printf '\nCheck https://remotedesktop.google.com/headless\n'
 read -p "Paste Here: " CRP
 su - syahrul -c """$CRP"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 
 
-
-printf "Installing Tools " >&2
-{
 wget https://sahruldotid.github.io/recon
 wget https://sahruldotid.github.io/ctf
 
@@ -36,4 +33,4 @@ mv ctf /usr/bin/ctf
 
 chmod +x /usr/bin/recon
 chmod +x /usr/bin/ctf
-} &> /dev/null &&
+

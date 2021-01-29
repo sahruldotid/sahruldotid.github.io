@@ -8,8 +8,8 @@ ssh-keygen -t rsa -N '' -b 4096 -C "your_email@example.com" -f ~/.ssh/id_rsa <<<
 sudo apt update
 
 #INSTALL GOLANG
-wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
-tar -xvf go1.14.1.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.15.7.linux-amd64.tar.gz
+tar -xvf go1.15.7.linux-amd64.tar.gz
 sudo mv go /usr/local
 
 export PATH=/usr/local/go/bin:$PATH:/home/syahrul/go/bin/

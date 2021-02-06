@@ -20,8 +20,7 @@ sudo apt install nautilus nano python3.7 -y
 sudo adduser syahrul chrome-remote-desktop
 } &> /dev/null &&
 printf '\nCheck https://remotedesktop.google.com/headless\n'
-read -p "Paste Here: " CRP
-su - syahrul -c """$CRP"""
+su - syahrul -c """$1"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 
 

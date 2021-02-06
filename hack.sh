@@ -16,7 +16,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano python3.7 -y
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+#sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
 sudo adduser syahrul chrome-remote-desktop
 } &> /dev/null &&
 printf '\nCheck https://remotedesktop.google.com/headless\n'

@@ -20,7 +20,8 @@ sudo apt install nautilus nano python3.7 vim file -y
 sudo adduser syahrul chrome-remote-desktop
 } &> /dev/null &&
 printf '\nCheck https://remotedesktop.google.com/headless\n'
-su - syahrul -c """$1"""
+read -p "Paste Here: " TOKEN
+su - syahrul -c """$TOKEN"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 
 

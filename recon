@@ -15,7 +15,7 @@ sudo mv go /usr/local
 export PATH=/usr/local/go/bin:$PATH:/home/syahrul/go/bin/
 
 # INSTALL MAIN RECON TOOLS
-sudo apt install chromium-browser vim ruby-full nmap netcat jq dnsutils awscli
+sudo apt install vim ruby-full nmap netcat jq dnsutils awscli
 wget https://github.com/michenriksen/aquatone/releases/download/v1.6.0/aquatone_linux_amd64_1.6.0.zip
 unzip aquatone_linux_amd64_1.6.0.zip
 

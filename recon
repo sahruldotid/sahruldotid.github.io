@@ -40,22 +40,6 @@ git clone https://github.com/GerbenJavado/LinkFinder.git linkfinder
 cd linkfinder
 sudo python setup.py install
 
-#INSTALL GITGRABER
-cd ~
-git clone https://github.com/hisxo/gitGraber.git gitgraber
-cd gitgraber
-sudo pip3 install -r requirements.txt
-
-
-#INSTALL STRUTS PWN
-cd ~
-git clone https://github.com/mazen160/struts-pwn_CVE-2018-11776.git struts
-
-#INSTALL XSSTRIKE
-cd ~
-git clone https://github.com/s0md3v/XSStrike.git xsstrike
-cd xsstrike
-sudo pip3 install -r requirements.txt
 
 #INSTALL DIRSEARCH
 cd ~
@@ -64,12 +48,6 @@ git clone https://github.com/maurosoria/dirsearch.git
 #INSTALL HTTPX
 
 sudo pip3 install httpx
-#INSTALL TRUFFLEHOG
-sudo pip install trufflehog
-
-#INSTALL SQLMAP
-git clone https://github.com/sqlmapproject/sqlmap.git
-
 
 
 #INSTALL DEX2JAR
@@ -95,11 +73,6 @@ go get github.com/ffuf/ffuf
 #crawler
 go get github.com/hakluke/hakrawler
 
-#arjun param finder
-git clone https://github.com/s0md3v/Arjun.git
-
-#dalfox 
-go get -u github.com/hahwul/dalfox
 
 #get all urls
 go get -u github.com/lc/gau

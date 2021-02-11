@@ -23,11 +23,6 @@ unzip aquatone_linux_amd64_1.6.0.zip
 AMASS_LATEST=`curl --silent "https://api.github.com/repos/OWASP/Amass/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'`
 wget https://github.com/OWASP/Amass/releases/download/$AMASS_LATEST/amass_linux_amd64.zip && unzip amass_linux_amd64.zip
 
-#INSTALL NUCLEI
-URL_NUCLEI=`curl --silent "https://api.github.com/repos/projectdiscovery/nuclei/releases/latest" | grep linux_amd64 | grep "browser_download_url" | sed -E 's/.*"([^"]+)".*/\1/'`
-wget $URL_NUCLEI -O nuclei.tar.gz
-tar -xzvf nuclei.tar.gz
-mv nuclei ~/go/bin/
 
 #INSTALL PIP
 curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
@@ -45,10 +40,6 @@ sudo python setup.py install
 cd ~
 git clone https://github.com/maurosoria/dirsearch.git
 
-#INSTALL HTTPX
-
-sudo pip3 install httpx
-
 
 #INSTALL DEX2JAR
 cd ~
@@ -59,22 +50,23 @@ sudo wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.0.jar 
 sudo chmod +x /usr/local/bin/apktool*
 wget https://github.com/java-decompiler/jd-gui/releases/download/v1.6.0/jd-gui-1.6.0.deb -O /tmp/jdgui.deb
 
-#TOMNOMNOM'S TOOLS
+
+
 cd ~
-go get github.com/tomnomnom/waybackurls
+go get -u github.com/tomnomnom/waybackurls
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/meg
 go get -u github.com/tomnomnom/assetfinder
-
-
-#ffuf
-go get github.com/ffuf/ffuf
-
-#crawler
-go get github.com/hakluke/hakrawler
-
-
-#get all urls
+go get -u github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+go get -u github.com/projectdiscovery/chaos-client/cmd/chaos
+go get -u github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+go get -u github.com/projectdiscovery/httpx/cmd/httpx
+go get -u github.com/projectdiscovery/notify/cmd/notify
+go get -u github.com/projectdiscovery/notify/cmd/intercept
+go get -u github.com/tomnomnom/anew
+go get -u github.com/projectdiscovery/notify/cmd/notify
+go get -u github.com/ffuf/ffuf
+go get -u github.com/hakluke/hakrawler
 go get -u github.com/lc/gau
 
 #Bash Profile

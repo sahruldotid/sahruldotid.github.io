@@ -57,16 +57,16 @@ go get -u github.com/tomnomnom/waybackurls
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/meg
 go get -u github.com/tomnomnom/assetfinder
-go get -u github.com/projectdiscovery/subfinder/v2/cmd/subfinder
-go get -u github.com/projectdiscovery/chaos-client/cmd/chaos
-go get -u github.com/projectdiscovery/nuclei/v2/cmd/nuclei
-go get -u github.com/projectdiscovery/httpx/cmd/httpx
-go get -u github.com/projectdiscovery/notify/cmd/notify
-go get -u github.com/projectdiscovery/notify/cmd/intercept
 go get -u github.com/tomnomnom/anew
-go get -u github.com/ffuf/ffuf
 go get -u github.com/hakluke/hakrawler
-go get -u github.com/lc/gau
+
+github-latest projectdiscovery/subfinder
+github-latest projectdiscovery/chaos-client
+github-latest projectdiscovery/nuclei
+github-latest projectdiscovery/httpx
+github-latest projectdiscovery/notify
+github-latest ffuf/ffuf
+github-latest lc/gau
 
 #Bash Profile
 wget https://sahruldotid.github.io/bash_profile

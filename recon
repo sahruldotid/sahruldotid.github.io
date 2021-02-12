@@ -68,6 +68,7 @@ github-latest projectdiscovery/httpx
 github-latest projectdiscovery/notify
 github-latest ffuf/ffuf
 github-latest lc/gau
+for f in *.tar.gz; do sudo tar -xvf "$f" -C /usr/local/games/; done
 
 #Bash Profile
 wget https://sahruldotid.github.io/bash_profile

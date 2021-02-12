@@ -25,9 +25,9 @@ su - syahrul -c """$TOKEN"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
 
 
-wget –quiet https://sahruldotid.github.io/recon
-wget –quiet https://sahruldotid.github.io/ctf
-wget –quiet https://sahruldotid.github.io/github-latest
+wget -quiet https://sahruldotid.github.io/recon
+wget -quiet https://sahruldotid.github.io/ctf
+wget -quiet https://sahruldotid.github.io/github-latest
 
 
 mv recon /usr/bin/recon

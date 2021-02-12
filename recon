@@ -13,7 +13,6 @@ tar -xvf go1.15.7.linux-amd64.tar.gz
 sudo mv go /usr/local
 rm go1.15.7.linux-amd64.tar.gz
 
-export PATH=/usr/local/go/bin:$PATH:/home/syahrul/go/bin/
 
 # INSTALL MAIN RECON TOOLS
 sudo apt install vim ruby-full nmap netcat jq dnsutils awscli
@@ -81,4 +80,5 @@ rm LICENSE*
 rm README*
 rm *tar.gz
 nuclei -update-templates
+
 echo "source /home/syahrul/bash_profile" >> .profile

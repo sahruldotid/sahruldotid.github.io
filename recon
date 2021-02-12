@@ -80,5 +80,5 @@ rm *.zip
 rm LICENSE*
 rm README*
 rm *tar.gz
-
+nuclei -update-templates
 echo "source /home/syahrul/bash_profile" >> .profile

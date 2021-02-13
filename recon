@@ -26,7 +26,7 @@ wget -q https://github.com/OWASP/Amass/releases/download/$AMASS_LATEST/amass_lin
 
 
 #INSTALL PIP
-curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
+curl https://bootstrap.pypa.io/2.7/get-pip.py -o /tmp/get-pip.py
 sudo python2 /tmp/get-pip.py
 sudo python3 /tmp/get-pip.py
 

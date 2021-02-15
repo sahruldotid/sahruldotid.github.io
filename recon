@@ -46,10 +46,10 @@ git clone https://github.com/maurosoria/dirsearch.git
 cd ~
 git clone https://github.com/Damian89/extended-xss-search.git
 git clone https://github.com/sahruldotid/dex2jar.git
-sudo wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O /usr/local/bin/apktool
-sudo wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.0.jar -O /usr/local/bin/apktool.jar
+sudo wget -q https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O /usr/local/bin/apktool
+sudo wget -q https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.0.jar -O /usr/local/bin/apktool.jar
 sudo chmod +x /usr/local/bin/apktool*
-wget https://github.com/java-decompiler/jd-gui/releases/download/v1.6.0/jd-gui-1.6.0.deb -O /tmp/jdgui.deb
+wget -q https://github.com/java-decompiler/jd-gui/releases/download/v1.6.0/jd-gui-1.6.0.deb -O /tmp/jdgui.deb
 
 
 

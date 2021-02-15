@@ -83,4 +83,3 @@ rm *tar.gz
 nuclei -update-templates
 subfinder
 notify
-echo "source /home/syahrul/bash_profile" >> .profile

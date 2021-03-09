@@ -1,0 +1,85 @@
+#!/bin/bash 
+
+source /etc/environment
+#GENERATE SSH KEY
+ssh-keygen -t rsa -N '' -b 4096 -C "your_email@example.com" -f ~/.ssh/id_rsa <<< y
+
+
+# UPDATING REPO
+sudo apt update
+
+#INSTALL GOLANG
+wget https://dl.google.com/go/go1.15.7.linux-amd64.tar.gz
+tar -xvf go1.15.7.linux-amd64.tar.gz
+sudo mv go /usr/local
+rm go1.15.7.linux-amd64.tar.gz
+
+
+# INSTALL MAIN RECON TOOLS
+sudo apt install vim ruby-full nmap netcat jq dnsutils awscli
+wget -q https://github.com/michenriksen/aquatone/releases/download/v1.6.0/aquatone_linux_amd64_1.6.0.zip
+unzip aquatone_linux_amd64_1.6.0.zip
+
+# INSTALL AMASS
+AMASS_LATEST=`curl --silent "https://api.github.com/repos/OWASP/Amass/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'`
+wget -q https://github.com/OWASP/Amass/releases/download/$AMASS_LATEST/amass_linux_amd64.zip && unzip amass_linux_amd64.zip
+
+
+#INSTALL PIP
+curl https://bootstrap.pypa.io/2.7/get-pip.py -o /tmp/get-pip.py
+sudo python2 /tmp/get-pip.py
+sudo python3 /tmp/get-pip.py
+
+# INSTALL LINKFINDER
+cd ~
+git clone https://github.com/GerbenJavado/LinkFinder.git linkfinder
+cd linkfinder
+sudo python setup.py install
+
+
+#INSTALL DIRSEARCH
+cd ~
+git clone https://github.com/maurosoria/dirsearch.git
+
+
+#INSTALL DEX2JAR
+cd ~
+git clone https://github.com/Damian89/extended-xss-search.git
+git clone https://github.com/sahruldotid/dex2jar.git
+sudo wget -q https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O /usr/local/bin/apktool
+sudo wget -q https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.0.jar -O /usr/local/bin/apktool.jar
+sudo chmod +x /usr/local/bin/apktool*
+wget -q https://github.com/java-decompiler/jd-gui/releases/download/v1.6.0/jd-gui-1.6.0.deb -O /tmp/jdgui.deb
+
+
+
+cd ~
+go get -u github.com/tomnomnom/waybackurls
+go get -u github.com/tomnomnom/httprobe
+go get -u github.com/tomnomnom/meg
+go get -u github.com/tomnomnom/assetfinder
+go get -u github.com/tomnomnom/anew
+go get -u github.com/hakluke/hakrawler
+
+github-latest projectdiscovery/subfinder
+github-latest projectdiscovery/chaos-client
+github-latest projectdiscovery/nuclei
+github-latest projectdiscovery/httpx
+github-latest projectdiscovery/notify
+github-latest ffuf/ffuf
+github-latest lc/gau
+for f in *.tar.gz; do sudo tar -xvf "$f" -C /usr/local/games/; done
+
+#Bash Profile
+wget -q https://sahruldotid.github.io/bash_profile
+
+
+wget -q https://raw.githubusercontent.com/gwen001/pentest-tools/master/smuggler.py
+
+rm *.zip
+rm LICENSE*
+rm README*
+rm *tar.gz
+nuclei -update-templates
+subfinder
+notify

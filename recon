@@ -1,6 +1,6 @@
 ssh-keygen -t rsa -N '' -b 4096 -C "pwn@mail.com" -f ~/.ssh/id_rsa <<< y
 wget -q -O - https://git.io/vQhTU | bash
-source $HOME/.bashrc
+source ~/.bashrc
 go get -u github.com/tomnomnom/waybackurls
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/meg

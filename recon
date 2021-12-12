@@ -1,18 +1,18 @@
 ssh-keygen -t rsa -N '' -b 4096 -C "pwn@mail.com" -f ~/.ssh/id_rsa <<< y
 wget -q -O - https://git.io/vQhTU | bash
-source ~/.bashrc
-go get -u github.com/tomnomnom/waybackurls
-go get -u github.com/tomnomnom/httprobe
-go get -u github.com/tomnomnom/meg
-go get -u github.com/tomnomnom/assetfinder
-go get -u github.com/tomnomnom/anew
-go get -u github.com/hakluke/hakrawler
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-GO111MODULE=on go get -v github.com/projectdiscovery/notify/cmd/notify
-GO111MODULE=on go get -u -v github.com/lc/gau
-go get -u github.com/ffuf/ffuf
+
+~/.go/bin/go get -u github.com/tomnomnom/waybackurls
+~/.go/bin/go get -u github.com/tomnomnom/httprobe
+~/.go/bin/go get -u github.com/tomnomnom/meg
+~/.go/bin/go get -u github.com/tomnomnom/assetfinder
+~/.go/bin/go get -u github.com/tomnomnom/anew
+~/.go/bin/go get -u github.com/hakluke/hakrawler
+~/.go/bin/go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+~/.go/bin/go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+~/.go/bin/go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+~/.go/bin/go install -v github.com/projectdiscovery/notify/cmd/notify@latest
+GO111MODULE=on ~/.go/bin/go get -u -v github.com/lc/gau
+~/.go/bin/go get -u github.com/ffuf/ffuf
 
 wget -q https://github.com/michenriksen/aquatone/releases/download/v1.6.0/aquatone_linux_amd64_1.6.0.zip
 unzip aquatone_linux_amd64_1.6.0.zip

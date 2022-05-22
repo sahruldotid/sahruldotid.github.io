@@ -1,12 +1,9 @@
 ssh-keygen -t rsa -N '' -b 4096 -C "pwn@mail.com" -f ~/.ssh/id_rsa <<< y
 wget -q -O - https://git.io/vQhTU | bash
 
-~/.go/bin/go get -u github.com/tomnomnom/waybackurls
-~/.go/bin/go get -u github.com/tomnomnom/httprobe
-~/.go/bin/go get -u github.com/tomnomnom/meg
-~/.go/bin/go get -u github.com/tomnomnom/assetfinder
-~/.go/bin/go get -u github.com/tomnomnom/anew
-~/.go/bin/go get -u github.com/hakluke/hakrawler
+~/.go/bin/go install github.com/tomnomnom/waybackurls@latest
+~/.go/bin/go install -v github.com/tomnomnom/anew@latest
+~/.go/bin/go install github.com/hakluke/hakrawler@latest
 ~/.go/bin/go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ~/.go/bin/go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 ~/.go/bin/go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
